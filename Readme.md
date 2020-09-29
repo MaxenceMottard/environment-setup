@@ -2,6 +2,7 @@
 
 ## Brew
 
+Before all, you have to install brew.
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
@@ -15,20 +16,9 @@ brew cask install brooklyn
 ## Iterm2 & theme
 
 ```bash
-# Terminal application
-brew cask install iterm2
-
-# Theme
-cd ~/Downloads
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/wesbos/Cobalt2-iterm.git
-mv ./Cobalt2-iterm/cobalt2.zsh-theme ~/.oh-my-zsh/themes
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python get-pip.py
-pip install --user powerline-status
-git clone https://github.com/powerline/fonts
-cd fonts
-./install.sh
+git clone https://github.com/MaxenceMottard/environment-setup.git
+cd environment-setup
+./install-iterm-and-theme.sh
 ```
 
 - In **~/.zshrc** change **ZSH_THEME** value to **cobalt2** : `ZSH_THEME=cobalt2`
